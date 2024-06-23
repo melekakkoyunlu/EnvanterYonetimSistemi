@@ -45,14 +45,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.urunBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.urunTableAdapter = new EnvanterYönetimSistemi.EnvanterYonetimDataSetTableAdapters.UrunTableAdapter();
             this.UrunID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UrunAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StokMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BirimFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.urunTableAdapter = new EnvanterYönetimSistemi.EnvanterYonetimDataSetTableAdapters.UrunTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urunBindingSource1)).BeginInit();
@@ -89,7 +89,7 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(21, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1052, 407);
+            this.panel1.Size = new System.Drawing.Size(964, 407);
             this.panel1.TabIndex = 1;
             // 
             // lbl_toplam
@@ -97,29 +97,28 @@
             this.lbl_toplam.AutoSize = true;
             this.lbl_toplam.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_toplam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_toplam.Location = new System.Drawing.Point(789, 176);
+            this.lbl_toplam.Location = new System.Drawing.Point(702, 180);
             this.lbl_toplam.Name = "lbl_toplam";
             this.lbl_toplam.Size = new System.Drawing.Size(0, 16);
             this.lbl_toplam.TabIndex = 14;
-
             // 
             // btn_hesapla
             // 
             this.btn_hesapla.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_hesapla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_hesapla.Location = new System.Drawing.Point(954, 124);
+            this.btn_hesapla.Location = new System.Drawing.Point(867, 128);
             this.btn_hesapla.Name = "btn_hesapla";
             this.btn_hesapla.Size = new System.Drawing.Size(69, 25);
             this.btn_hesapla.TabIndex = 13;
             this.btn_hesapla.Text = "Hesapla";
             this.btn_hesapla.UseVisualStyleBackColor = true;
- 
+            this.btn_hesapla.Click += new System.EventHandler(this.btn_hesapla_Click_1);
             // 
             // btn_temizle
             // 
             this.btn_temizle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_temizle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_temizle.Location = new System.Drawing.Point(781, 256);
+            this.btn_temizle.Location = new System.Drawing.Point(694, 260);
             this.btn_temizle.Name = "btn_temizle";
             this.btn_temizle.Size = new System.Drawing.Size(71, 30);
             this.btn_temizle.TabIndex = 12;
@@ -131,7 +130,7 @@
             // 
             this.btn_sepetEkle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_sepetEkle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_sepetEkle.Location = new System.Drawing.Point(746, 209);
+            this.btn_sepetEkle.Location = new System.Drawing.Point(659, 213);
             this.btn_sepetEkle.Name = "btn_sepetEkle";
             this.btn_sepetEkle.Size = new System.Drawing.Size(137, 30);
             this.btn_sepetEkle.TabIndex = 11;
@@ -141,7 +140,7 @@
             // 
             // txt_adet
             // 
-            this.txt_adet.Location = new System.Drawing.Point(716, 129);
+            this.txt_adet.Location = new System.Drawing.Point(629, 133);
             this.txt_adet.Name = "txt_adet";
             this.txt_adet.Size = new System.Drawing.Size(207, 20);
             this.txt_adet.TabIndex = 9;
@@ -151,7 +150,7 @@
             this.cb_urun.DataSource = this.urunBindingSource1;
             this.cb_urun.DisplayMember = "UrunAd";
             this.cb_urun.FormattingEnabled = true;
-            this.cb_urun.Location = new System.Drawing.Point(716, 89);
+            this.cb_urun.Location = new System.Drawing.Point(629, 93);
             this.cb_urun.Name = "cb_urun";
             this.cb_urun.Size = new System.Drawing.Size(207, 21);
             this.cb_urun.TabIndex = 8;
@@ -171,7 +170,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(599, 171);
+            this.label4.Location = new System.Drawing.Point(512, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 22);
             this.label4.TabIndex = 7;
@@ -182,7 +181,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(599, 129);
+            this.label3.Location = new System.Drawing.Point(512, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 6;
@@ -193,7 +192,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(600, 89);
+            this.label2.Location = new System.Drawing.Point(513, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 22);
             this.label2.TabIndex = 5;
@@ -205,7 +204,7 @@
             this.label1.BackColor = System.Drawing.Color.CadetBlue;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(599, 18);
+            this.label1.Location = new System.Drawing.Point(512, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 22);
             this.label1.TabIndex = 4;
@@ -223,39 +222,8 @@
             this.dataGridView1.DataSource = this.urunBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(28, 18);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(539, 367);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 367);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // urunBindingSource
-            // 
-            this.urunBindingSource.DataMember = "Urun";
-            this.urunBindingSource.DataSource = this.envanterYonetimDataSet;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1011, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(942, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // urunTableAdapter
-            // 
-            this.urunTableAdapter.ClearBeforeFill = true;
             // 
             // UrunID
             // 
@@ -282,12 +250,43 @@
             this.BirimFiyat.HeaderText = "Fiyat";
             this.BirimFiyat.Name = "BirimFiyat";
             // 
+            // urunBindingSource
+            // 
+            this.urunBindingSource.DataMember = "Urun";
+            this.urunBindingSource.DataSource = this.envanterYonetimDataSet;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(870, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(801, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(47, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // urunTableAdapter
+            // 
+            this.urunTableAdapter.ClearBeforeFill = true;
+            // 
             // MenuMusteri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1098, 545);
+            this.ClientSize = new System.Drawing.Size(1009, 545);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);

@@ -33,8 +33,7 @@ namespace EnvanterYönetimSistemi
             // TODO: Bu kod satırı 'envanterYonetimDataSet.Urun' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.urunTableAdapter.Fill(this.envanterYonetimDataSet.Urun);
         }
-
-        private void btn_hesapla_Click(object sender, EventArgs e)
+        private void btn_hesapla_Click_1(object sender, EventArgs e)
         {
             if (cb_urun.SelectedItem == null)
             {
@@ -60,7 +59,6 @@ namespace EnvanterYönetimSistemi
             }
 
         }
-
         private void btn_sepetEkle_Click(object sender, EventArgs e)
         {
             DataRowView selectedRow = (DataRowView)cb_urun.SelectedItem;
@@ -97,5 +95,6 @@ namespace EnvanterYönetimSistemi
             this.Close();
         }
 
+        
     }
 }
