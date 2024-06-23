@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sepet));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_sepet = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.urunAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toplamFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sepet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +62,21 @@
             this.dgv_sepet.Name = "dgv_sepet";
             this.dgv_sepet.Size = new System.Drawing.Size(340, 281);
             this.dgv_sepet.TabIndex = 0;
+            // 
+            // urunAd
+            // 
+            this.urunAd.HeaderText = "Ürün";
+            this.urunAd.Name = "urunAd";
+            // 
+            // adet
+            // 
+            this.adet.HeaderText = "Adet";
+            this.adet.Name = "adet";
+            // 
+            // toplamFiyat
+            // 
+            this.toplamFiyat.HeaderText = "Toplam";
+            this.toplamFiyat.Name = "toplamFiyat";
             // 
             // pictureBox1
             // 
@@ -95,21 +110,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "ONAYLA";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // urunAd
-            // 
-            this.urunAd.HeaderText = "Ürün";
-            this.urunAd.Name = "urunAd";
-            // 
-            // adet
-            // 
-            this.adet.HeaderText = "Adet";
-            this.adet.Name = "adet";
-            // 
-            // toplamFiyat
-            // 
-            this.toplamFiyat.HeaderText = "Toplam";
-            this.toplamFiyat.Name = "toplamFiyat";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Sepet
             // 
