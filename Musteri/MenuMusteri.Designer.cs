@@ -98,9 +98,9 @@
             this.lbl_toplam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbl_toplam.Location = new System.Drawing.Point(602, 176);
             this.lbl_toplam.Name = "lbl_toplam";
-            this.lbl_toplam.Size = new System.Drawing.Size(15, 16);
+            this.lbl_toplam.Size = new System.Drawing.Size(0, 16);
             this.lbl_toplam.TabIndex = 14;
-            this.lbl_toplam.Text = "a";
+            this.lbl_toplam.Click += new System.EventHandler(this.lbl_toplam_Click);
             // 
             // button1
             // 
