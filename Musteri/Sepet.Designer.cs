@@ -35,8 +35,8 @@
             this.adet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toplamFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_onayla = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sepet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,28 +89,29 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // btn_clear
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Location = new System.Drawing.Point(253, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 32);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "SEPETİ BOŞALT";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_clear.Location = new System.Drawing.Point(253, 409);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(122, 32);
+            this.btn_clear.TabIndex = 2;
+            this.btn_clear.Text = "SİL";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // button2
+            // btn_onayla
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Location = new System.Drawing.Point(125, 409);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 32);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "ONAYLA";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_onayla.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_onayla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_onayla.Location = new System.Drawing.Point(125, 409);
+            this.btn_onayla.Name = "btn_onayla";
+            this.btn_onayla.Size = new System.Drawing.Size(122, 32);
+            this.btn_onayla.TabIndex = 3;
+            this.btn_onayla.Text = "ONAYLA";
+            this.btn_onayla.UseVisualStyleBackColor = true;
+            this.btn_onayla.Click += new System.EventHandler(this.btn_onayla_Click);
             // 
             // Sepet
             // 
@@ -118,9 +119,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(416, 459);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_onayla);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.panel1);
             this.Name = "Sepet";
             this.Text = "Sepet";
@@ -136,8 +137,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_onayla;
         private System.Windows.Forms.DataGridView dgv_sepet;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunAd;
         private System.Windows.Forms.DataGridViewTextBoxColumn adet;

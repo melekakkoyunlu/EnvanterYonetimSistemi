@@ -11,6 +11,8 @@ namespace EnvanterYönetimSistemi.Entities
         public string UrunAd { get; set; }
         public int Adet { get; set; }
         public decimal ToplamFiyat { get; set; }
+        public decimal BirimFiyat { get; set; }
         public int MusteriID { get; set; }
+        public int UrunID { get; set; }
     }
 }
