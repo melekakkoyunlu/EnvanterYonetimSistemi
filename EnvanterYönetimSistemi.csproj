@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D2EC2CF-FD47-4AD5-83CE-25AEFBFFB077}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EnvanterYönetimSistemi</RootNamespace>
+    <AssemblyName>EnvanterYönetimSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calisan\SiparisYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\SiparisYonetim.Designer.cs">
+      <DependentUpon>SiparisYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\TedarikYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\TedarikYonetim.Designer.cs">
+      <DependentUpon>TedarikYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SepetUrun.cs" />
+    <Compile Include="EnvanterYonetimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvanterYonetimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Giris\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\MenuCalisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\MenuCalisan.Designer.cs">
+      <DependentUpon>MenuCalisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giris\MusteriBilgiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris\MusteriBilgiForm.Designer.cs">
+      <DependentUpon>MusteriBilgiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri\MenuMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteri\MenuMusteri.Designer.cs">
+      <DependentUpon>MenuMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\MusteriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\MusteriEkle.Designer.cs">
+      <DependentUpon>MusteriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri\Sepet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteri\Sepet.Designer.cs">
+      <DependentUpon>Sepet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri\Siparislerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteri\Siparislerim.Designer.cs">
+      <DependentUpon>Siparislerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Giris\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\UrunYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\UrunYonetim.Designer.cs">
+      <DependentUpon>UrunYonetim.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calisan\SiparisYonetim.resx">
+      <DependentUpon>SiparisYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\TedarikYonetim.resx">
+      <DependentUpon>TedarikYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\MenuCalisan.resx">
+      <DependentUpon>MenuCalisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\MusteriEkle.resx">
+      <DependentUpon>MusteriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris\MusteriBilgiForm.resx">
+      <DependentUpon>MusteriBilgiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteri\MenuMusteri.resx">
+      <DependentUpon>MenuMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteri\Sepet.resx">
+      <DependentUpon>Sepet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteri\Siparislerim.resx">
+      <DependentUpon>Siparislerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Giris\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\UrunYonetim.resx">
+      <DependentUpon>UrunYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="EnvanterYonetimDataSet.xsc">
+      <DependentUpon>EnvanterYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EnvanterYonetimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvanterYonetimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvanterYonetimDataSet.xss">
+      <DependentUpon>EnvanterYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
