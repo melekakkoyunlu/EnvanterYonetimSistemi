@@ -171,14 +171,12 @@ namespace EnvanterYönetimSistemi
             {
                 DataGridViewRow selectedRow = dgv_urunler.SelectedRows[0];
 
-                // DataGridView'deki hücrelerden değerleri çekiyoruz
                 int urunID = Convert.ToInt32(selectedRow.Cells["UrunID"].Value);
                 String urunAd = selectedRow.Cells["UrunAd"].Value.ToString();
                 int stok = Convert.ToInt32(selectedRow.Cells["StokMiktar"].Value);
                 decimal birimFiyat = Convert.ToDecimal(selectedRow.Cells["BirimFiyat"].Value);
                 int tedarikciID = Convert.ToInt32(selectedRow.Cells["TedarikciID"].Value);
 
-                // Güncellemeyi yapacak SQL sorgusu
                 String query = "UPDATE Urun SET UrunAd = @UrunAd, StokMiktar = @StokMiktar, BirimFiyat = @BirimFiyat, TedarikciID = @TedarikciID WHERE UrunID = @UrunID;";
 
                 try
