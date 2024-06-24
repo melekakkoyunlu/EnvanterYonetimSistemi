@@ -68,6 +68,7 @@ namespace EnvanterYönetimSistemi
             int urunID = (int)selectedRow["UrunID"];
             String adetTxt = txt_adet.Text;
             int adet = Convert.ToInt32(adetTxt);
+            toplamFiyat = (adet * birimFiyat);
 
             sepet.Add(new SepetUrun { UrunAd = urunAd, Adet = adet, ToplamFiyat = toplamFiyat, MusteriID = musteriID, UrunID = urunID, BirimFiyat = birimFiyat });
 
@@ -84,7 +85,7 @@ namespace EnvanterYönetimSistemi
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Sepet sepetForm = new Sepet(musteriID, sepet, this);
+            Sepet sepetForm = new Sepet(musteriID, sepet,this);
             this.Hide();
             sepetForm.Show();
         }
