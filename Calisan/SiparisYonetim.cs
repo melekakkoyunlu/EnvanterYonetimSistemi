@@ -75,11 +75,28 @@ namespace EnvanterYönetimSistemi.Calisan
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("İşlem başarılı.");
+
+                            string selectDetayQuery = $"SELECT UrunID, Adet FROM SiparisDetay WHERE SiparisID = {siparisID}";
+                            SqlCommand selectDetayCmd = new SqlCommand(selectDetayQuery, conn);
+                            SqlDataReader reader = selectDetayCmd.ExecuteReader();
+
+                            while (reader.Read())
+                            {
+                                int urunID = reader.GetInt32(0);
+                                int adet = reader.GetInt32(1);
+
+                                string updateStokQuery = $"UPDATE Urun SET StokMiktar = StokMiktar - {adet} WHERE UrunID = {urunID}";
+                                SqlCommand updateStokCmd = new SqlCommand(updateStokQuery, conn);
+                                updateStokCmd.ExecuteNonQuery();
+                            }
+
+                            reader.Close();
+
                             LoadSiparisler(); 
                         }
                         else
                         {
-                            MessageBox.Show($"Sipariş {durum.ToLower()} işlemi sırasında bir hata oluştu.");
+                            MessageBox.Show("Sipariş işlemi sırasında bir hata oluştu.");
                         }
                     }
                 }
@@ -97,6 +114,7 @@ namespace EnvanterYönetimSistemi.Calisan
         private void btn_onayla_Click(object sender, EventArgs e)
         {
             UpdateSiparisDurum("Onaylandı");
+
         }
 
         private void btn_iptal_Click(object sender, EventArgs e)
