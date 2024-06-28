@@ -85,6 +85,7 @@
             this.btn_fatura.TabIndex = 3;
             this.btn_fatura.Text = "FATURA OLUŞTUR";
             this.btn_fatura.UseVisualStyleBackColor = false;
+            this.btn_fatura.Click += new System.EventHandler(this.btn_fatura_Click);
             // 
             // btn_rapor
             // 
@@ -97,6 +98,7 @@
             this.btn_rapor.TabIndex = 4;
             this.btn_rapor.Text = "RAPOR OLUŞTUR";
             this.btn_rapor.UseVisualStyleBackColor = false;
+            this.btn_rapor.Click += new System.EventHandler(this.btn_rapor_Click);
             // 
             // btn_urunYonetim
             // 

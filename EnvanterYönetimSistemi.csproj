@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calisan\FaturaOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\FaturaOlustur.Designer.cs">
+      <DependentUpon>FaturaOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\RaporOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\RaporOlustur.Designer.cs">
+      <DependentUpon>RaporOlustur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calisan\SiparisYonetim.cs">
       <SubType>Form</SubType>
     </Compile>

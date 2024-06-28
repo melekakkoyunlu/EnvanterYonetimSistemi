@@ -50,5 +50,19 @@ namespace EnvanterYönetimSistemi
         {
 
         }
+
+        private void btn_fatura_Click(object sender, EventArgs e)
+        {
+            FaturaOlustur faturaOlustur = new FaturaOlustur();
+            faturaOlustur.Show();
+            this.Close();
+        }
+
+        private void btn_rapor_Click(object sender, EventArgs e)
+        {
+            RaporOlustur raporOlustur = new RaporOlustur();
+            raporOlustur.Show();
+            this.Close();
+        }
     }
 }
