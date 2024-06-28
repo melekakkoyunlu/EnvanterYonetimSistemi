@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Siparislerim));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_siparisler = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.UrunAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToplamTutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiparisTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiparisDurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.envanterYonetimDataSet = new EnvanterYönetimSistemi.EnvanterYonetimDataSet();
+            this.envanterYonetimDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_siparisler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -65,16 +65,14 @@
             // 
             // dgv_siparisler
             // 
+            this.dgv_siparisler.AllowUserToOrderColumns = true;
+            this.dgv_siparisler.AutoGenerateColumns = false;
             this.dgv_siparisler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_siparisler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UrunAd,
-            this.Adet,
-            this.ToplamTutar,
-            this.SiparisTarih,
-            this.SiparisDurum});
-            this.dgv_siparisler.Location = new System.Drawing.Point(23, 20);
+            this.dgv_siparisler.DataSource = this.envanterYonetimDataSetBindingSource;
+            this.dgv_siparisler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_siparisler.Location = new System.Drawing.Point(0, 0);
             this.dgv_siparisler.Name = "dgv_siparisler";
-            this.dgv_siparisler.Size = new System.Drawing.Size(530, 311);
+            this.dgv_siparisler.Size = new System.Drawing.Size(570, 350);
             this.dgv_siparisler.TabIndex = 0;
             // 
             // button1
@@ -88,30 +86,15 @@
             this.button1.Text = "İptal Et";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // UrunAd
+            // envanterYonetimDataSet
             // 
-            this.UrunAd.HeaderText = "Ürün";
-            this.UrunAd.Name = "UrunAd";
+            this.envanterYonetimDataSet.DataSetName = "EnvanterYonetimDataSet";
+            this.envanterYonetimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Adet
+            // envanterYonetimDataSetBindingSource
             // 
-            this.Adet.HeaderText = "Adet";
-            this.Adet.Name = "Adet";
-            // 
-            // ToplamTutar
-            // 
-            this.ToplamTutar.HeaderText = "Toplam";
-            this.ToplamTutar.Name = "ToplamTutar";
-            // 
-            // SiparisTarih
-            // 
-            this.SiparisTarih.HeaderText = "Tarih";
-            this.SiparisTarih.Name = "SiparisTarih";
-            // 
-            // SiparisDurum
-            // 
-            this.SiparisDurum.HeaderText = "Sipariş Durum";
-            this.SiparisDurum.Name = "SiparisDurum";
+            this.envanterYonetimDataSetBindingSource.DataSource = this.envanterYonetimDataSet;
+            this.envanterYonetimDataSetBindingSource.Position = 0;
             // 
             // Siparislerim
             // 
@@ -128,6 +111,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_siparisler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,10 +123,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgv_siparisler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UrunAd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ToplamTutar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SiparisTarih;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SiparisDurum;
+        private System.Windows.Forms.BindingSource envanterYonetimDataSetBindingSource;
+        private EnvanterYonetimDataSet envanterYonetimDataSet;
     }
 }
