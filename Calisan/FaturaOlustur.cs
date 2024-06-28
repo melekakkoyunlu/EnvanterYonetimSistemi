@@ -38,10 +38,6 @@ namespace EnvanterYönetimSistemi.Calisan
                 try {
                     DataGridViewRow selectedRow = dgv_fatura.SelectedRows[0];
                     int siparisID = Convert.ToInt32(selectedRow.Cells["SiparisID"].Value);
-                    int musteriID = Convert.ToInt32(selectedRow.Cells["MusteriID"].Value);
-
-                    Fatura fatura = new Fatura(siparisID);
-                    fatura.Show();
                 }
                 catch(Exception ex) { MessageBox.Show("Hata:" + ex); }
             }

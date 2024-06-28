@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FaturaOlustur));
             this.envanterYonetimDataSet1 = new EnvanterYönetimSistemi.EnvanterYonetimDataSet();
             this.dgv_fatura = new System.Windows.Forms.DataGridView();
-            this.siparisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siparisTableAdapter = new EnvanterYönetimSistemi.EnvanterYonetimDataSetTableAdapters.SiparisTableAdapter();
             this.siparisIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.musteriIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siparisTarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toplamTutarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siparisDurumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siparisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.siparisTableAdapter = new EnvanterYönetimSistemi.EnvanterYonetimDataSetTableAdapters.SiparisTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_olustur = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSet1)).BeginInit();
@@ -67,15 +67,6 @@
             this.dgv_fatura.Name = "dgv_fatura";
             this.dgv_fatura.Size = new System.Drawing.Size(544, 281);
             this.dgv_fatura.TabIndex = 0;
-            // 
-            // siparisBindingSource
-            // 
-            this.siparisBindingSource.DataMember = "Siparis";
-            this.siparisBindingSource.DataSource = this.envanterYonetimDataSet1;
-            // 
-            // siparisTableAdapter
-            // 
-            this.siparisTableAdapter.ClearBeforeFill = true;
             // 
             // siparisIDDataGridViewTextBoxColumn
             // 
@@ -107,6 +98,15 @@
             this.siparisDurumDataGridViewTextBoxColumn.DataPropertyName = "SiparisDurum";
             this.siparisDurumDataGridViewTextBoxColumn.HeaderText = "SiparisDurum";
             this.siparisDurumDataGridViewTextBoxColumn.Name = "siparisDurumDataGridViewTextBoxColumn";
+            // 
+            // siparisBindingSource
+            // 
+            this.siparisBindingSource.DataMember = "Siparis";
+            this.siparisBindingSource.DataSource = this.envanterYonetimDataSet1;
+            // 
+            // siparisTableAdapter
+            // 
+            this.siparisTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
