@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calisan\Fatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\Fatura.Designer.cs">
+      <DependentUpon>Fatura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calisan\FaturaOlustur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     <Compile Include="Calisan\UrunYonetim.Designer.cs">
       <DependentUpon>UrunYonetim.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Calisan\Fatura.resx">
+      <DependentUpon>Fatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\FaturaOlustur.resx">
+      <DependentUpon>FaturaOlustur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calisan\SiparisYonetim.resx">
       <DependentUpon>SiparisYonetim.cs</DependentUpon>
     </EmbeddedResource>
