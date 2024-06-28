@@ -68,52 +68,33 @@ namespace EnvanterYönetimSistemi.Musteri
             try
             {
                 conn.Open();
-
                 foreach (SepetUrun urun in sepet)
                 {
-                    String durum = "Onay Bekliyor";
+                    MessageBox.Show($"MusteriID : {musteriID}" );
                     String siparisTarih = DateTime.Now.ToString("yyyy-MM-dd");
-                    int musteriID = this.musteriID;
+                    String durum = "Onay Bekliyor";
 
-                    String queryToSiparis = "INSERT INTO Siparis (MusteriID, SiparisTarih, ToplamTutar, SiparisDurum) " +
-                                            "OUTPUT INSERTED.SiparisID " +
-                                            "VALUES (@musteriID, @siparisTarih, @toplamTutar, @durum);";
+                    String queryToSiparis = $"INSERT INTO Siparis (MusteriID, SiparisTarih, ToplamTutar, SiparisDurum) VALUES (@MusteriID, @SiparisTarih, @ToplamTutar, @SiparisDurum); SELECT SCOPE_IDENTITY();";
+                    SqlCommand siparisCmd = new SqlCommand(queryToSiparis, conn);
+                    siparisCmd.Parameters.AddWithValue("@MusteriID", musteriID);
+                    siparisCmd.Parameters.AddWithValue("@SiparisTarih", siparisTarih);
+                    siparisCmd.Parameters.AddWithValue("@ToplamTutar", urun.ToplamFiyat);
+                    siparisCmd.Parameters.AddWithValue("@SiparisDurum", durum);
 
-                    int siparisID;
+                    int siparisID = Convert.ToInt32(siparisCmd.ExecuteScalar());
 
-                    using (SqlCommand cmd = new SqlCommand(queryToSiparis, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@musteriID", musteriID);
-                        cmd.Parameters.AddWithValue("@siparisTarih", siparisTarih);
-                        cmd.Parameters.AddWithValue("@toplamTutar", urun.ToplamFiyat);
-                        cmd.Parameters.AddWithValue("@durum", durum);
-
-                        siparisID = (int)cmd.ExecuteScalar(); 
-                    }
-
-                    String queryToSiparisDetay = "INSERT INTO SiparisDetay (SiparisID, UrunID, BirimFiyat, Adet) " +
-                                                 "VALUES (@siparisID, @urunID, @birimFiyat, @adet);";
-
-                    using (SqlCommand cmd = new SqlCommand(queryToSiparisDetay, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@siparisID", siparisID);
-                        cmd.Parameters.AddWithValue("@urunID", urun.UrunID);
-                        cmd.Parameters.AddWithValue("@birimFiyat", urun.BirimFiyat);
-                        cmd.Parameters.AddWithValue("@adet", urun.Adet);
-
-                        cmd.ExecuteNonQuery();
-                    }
+                    String queryToSiparisDetay = $"INSERT INTO SiparisDetay (SiparisID, UrunID, BirimFiyat, Adet) VALUES (@SiparisID, @UrunID, @BirimFiyat, @Adet)";
+                    SqlCommand siparisDetayCmd = new SqlCommand(queryToSiparisDetay, conn);
+                    siparisDetayCmd.Parameters.AddWithValue("@SiparisID", siparisID);
+                    siparisDetayCmd.Parameters.AddWithValue("@UrunID", urun.UrunID);
+                    siparisDetayCmd.Parameters.AddWithValue("@BirimFiyat", urun.BirimFiyat);
+                    siparisDetayCmd.Parameters.AddWithValue("@Adet", urun.Adet);
+                    siparisDetayCmd.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Sipariş başarıyla oluşturuldu.");
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show($"SQL Hatası: {sqlEx.Message}");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Bir hata oluştu: {ex.Message}");
+                Console.WriteLine("Bir hata oluştu: " + ex.Message);
             }
             finally
             {

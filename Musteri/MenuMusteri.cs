@@ -93,7 +93,7 @@ namespace EnvanterYönetimSistemi
         {
             Siparislerim siparislerim = new Siparislerim(musteriID);
             siparislerim.Show();
-            this.Close();
+            this.Hide();
         }
 
         
