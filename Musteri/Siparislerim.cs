@@ -78,5 +78,43 @@ namespace EnvanterYönetimSistemi.Musteri
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dgv_siparisler.SelectedRows.Count > 0)
+            {
+                try
+                {
+
+                    DataGridViewRow selectedRow = dgv_siparisler.SelectedRows[0];
+                    int siparisID = Convert.ToInt32(selectedRow.Cells["SiparisID"].Value);
+
+                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True"))
+                    {
+                        conn.Open();
+                        string updateQuery = $"UPDATE Siparis SET SiparisDurum = 'İptal Edildi' WHERE SiparisID = {siparisID}";
+                        SqlCommand cmd = new SqlCommand(updateQuery, conn);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Sipariş başarıyla iptal edildi.");
+                            LoadSiparisler(); 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sipariş iptali sırasında bir hata oluştu.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen iptal etmek istediğiniz bir sipariş seçin.");
+            }
+        }
     }
 }
