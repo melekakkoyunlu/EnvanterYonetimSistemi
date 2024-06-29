@@ -16,5 +16,10 @@ namespace EnvanterYönetimSistemi.Calisan
         {
             InitializeComponent();
         }
+
+        private void RaporForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
