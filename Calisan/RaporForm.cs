@@ -21,6 +21,7 @@ namespace EnvanterYönetimSistemi.Calisan
             LoadSatisRapor();
             LoadMusteriRapor();
             this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
 
         private void LoadStokRapor()
