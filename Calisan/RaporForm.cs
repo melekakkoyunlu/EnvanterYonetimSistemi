@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnvanterYönetimSistemi.Calisan
 {
-    public partial class RaporOlustur : Form
+    public partial class RaporForm : Form
     {
-        public RaporOlustur()
+        public RaporForm()
         {
             InitializeComponent();
         }

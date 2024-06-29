@@ -60,8 +60,8 @@ namespace EnvanterYönetimSistemi
 
         private void btn_rapor_Click(object sender, EventArgs e)
         {
-            RaporOlustur raporOlustur = new RaporOlustur();
-            raporOlustur.Show();
+            RaporForm raporForm = new RaporForm();
+            raporForm.Show();
             this.Close();
         }
     }
