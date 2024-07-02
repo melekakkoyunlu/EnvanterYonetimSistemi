@@ -268,6 +268,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -427,18 +428,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="EnvanterYonetimDataSet1">
+    <DataSource Name="EnvanterYonetimDataSet2">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>d6b8ea24-4735-42c8-98d0-a76c04dccbf4</rd:DataSourceID>
+      <rd:DataSourceID>db3bd7ab-459f-4435-8950-b5300abc3ec3</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="StokRaporDataSet">
       <Query>
-        <DataSourceName>EnvanterYonetimDataSet1</DataSourceName>
+        <DataSourceName>EnvanterYonetimDataSet2</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -464,8 +465,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>EnvanterYonetimDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\pikac\source\repos\EnvanterYönetimSistemi\EnvanterYonetimDataSet1.xsd</rd:SchemaPath>
+        <rd:DataSetName>EnvanterYonetimDataSet2</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\pikac\source\repos\EnvanterYönetimSistemi\EnvanterYonetimDataSet2.xsd</rd:SchemaPath>
         <rd:TableName>Urun</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

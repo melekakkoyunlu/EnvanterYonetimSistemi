@@ -134,6 +134,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnvanterYonetimDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EnvanterYonetimDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Giris\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +295,17 @@
     </None>
     <None Include="EnvanterYonetimDataSet1.xss">
       <DependentUpon>EnvanterYonetimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EnvanterYonetimDataSet2.xsc">
+      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EnvanterYonetimDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvanterYonetimDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvanterYonetimDataSet2.xss">
+      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
