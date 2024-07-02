@@ -111,11 +111,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnvanterYonetimDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EnvanterYonetimDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Giris\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,11 +166,6 @@
     </Compile>
     <Compile Include="Calisan\UrunYonetim.Designer.cs">
       <DependentUpon>UrunYonetim.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TopMusteriDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TopMusteriDataSet1.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Calisan\Fatura.resx">
       <DependentUpon>Fatura.cs</DependentUpon>
@@ -253,17 +243,6 @@
     <None Include="EnvanterYonetimDataSet1.xss">
       <DependentUpon>EnvanterYonetimDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="EnvanterYonetimDataSet2.xsc">
-      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="EnvanterYonetimDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EnvanterYonetimDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="EnvanterYonetimDataSet2.xss">
-      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -274,17 +253,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TopMusteriDataSet1.xsc">
-      <DependentUpon>TopMusteriDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="TopMusteriDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TopMusteriDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TopMusteriDataSet1.xss">
-      <DependentUpon>TopMusteriDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -104,6 +104,7 @@
             // 
             // rv_Stok
             // 
+            this.rv_Stok.LocalReport.ReportEmbeddedResource = "EnvanterYönetimSistemi.Calisan.Reports.StokReport.rdlc";
             this.rv_Stok.Location = new System.Drawing.Point(16, 102);
             this.rv_Stok.Name = "rv_Stok";
             this.rv_Stok.ServerReport.BearerToken = null;
@@ -133,6 +134,7 @@
             // 
             // rv_Satis
             // 
+            this.rv_Satis.LocalReport.ReportEmbeddedResource = "EnvanterYönetimSistemi.Calisan.Reports.SatisReport.rdlc";
             this.rv_Satis.Location = new System.Drawing.Point(17, 102);
             this.rv_Satis.Name = "rv_Satis";
             this.rv_Satis.ServerReport.BearerToken = null;

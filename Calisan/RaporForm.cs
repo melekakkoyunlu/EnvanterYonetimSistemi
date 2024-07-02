@@ -8,7 +8,7 @@ namespace EnvanterYönetimSistemi.Calisan
 {
     public partial class RaporForm : Form
     {
-        private string connectionString =@"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True";
+        String connectionString = @"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True";
 
         public RaporForm()
         {
@@ -19,22 +19,23 @@ namespace EnvanterYönetimSistemi.Calisan
         {
             MusteriRaporLoad();
         }
+
         private void MusteriRaporLoad()
         {
             SqlConnection conn = new SqlConnection(connectionString);
             SqlDataAdapter dataAdapter = new SqlDataAdapter("sp_GetTopCustomer", conn);
             dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataSet dataSet = new DataSet();
+            System.Data.DataSet dataSet = new System.Data.DataSet();
 
             try
             {
                 conn.Open();
-                dataAdapter.Fill(dataSet, "TopMusteri");
+                dataAdapter.Fill(dataSet, "TopMusteriDataSet");
 
-                ReportDataSource rds = new ReportDataSource("TopMusteriDataSet", dataSet.Tables["TopMusteri"]);
+                ReportDataSource rds = new ReportDataSource("TopMusteriDataSet1", dataSet.Tables["TopMusteriDataSet"]);
                 rv_Musteri.LocalReport.DataSources.Clear();
                 rv_Musteri.LocalReport.DataSources.Add(rds);
-                rv_Musteri.LocalReport.ReportPath = @"Calisan\Reports\TopMusteriReport.rdlc"; 
+                rv_Musteri.LocalReport.ReportPath = @"C:\Users\pikac\source\repos\EnvanterYönetimSistemi\Calisan\Reports\MusteriReport.rdlc"; 
                 rv_Musteri.LocalReport.Refresh();
                 rv_Musteri.RefreshReport();
             }
@@ -47,7 +48,5 @@ namespace EnvanterYönetimSistemi.Calisan
                 conn.Close();
             }
         }
-
-  
     }
 }
