@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using EnvanterYönetimSistemi.Calisan.Reports;
 using Microsoft.Reporting.WinForms;
 
 namespace EnvanterYönetimSistemi.Calisan
@@ -17,36 +18,33 @@ namespace EnvanterYönetimSistemi.Calisan
 
         private void RaporForm_Load(object sender, EventArgs e)
         {
-            MusteriRaporLoad();
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MenuCalisan menuCalisan = new MenuCalisan();
+            menuCalisan.Show();
+            this.Close();
         }
 
-        private void MusteriRaporLoad()
+        private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(connectionString);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("sp_GetTopCustomer", conn);
-            dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-            System.Data.DataSet dataSet = new System.Data.DataSet();
+            MusteriReportForm frm = new MusteriReportForm();
+            frm.Show();
+            this.Close();
+        }
 
-            try
-            {
-                conn.Open();
-                dataAdapter.Fill(dataSet, "TopMusteriDataSet");
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StokReportForm frm = new StokReportForm();
+            frm.Show();
+            this.Close();
+        }
 
-                ReportDataSource rds = new ReportDataSource("TopMusteriDataSet1", dataSet.Tables["TopMusteriDataSet"]);
-                rv_Musteri.LocalReport.DataSources.Clear();
-                rv_Musteri.LocalReport.DataSources.Add(rds);
-                rv_Musteri.LocalReport.ReportPath = @"C:\Users\pikac\source\repos\EnvanterYönetimSistemi\Calisan\Reports\MusteriReport.rdlc"; 
-                rv_Musteri.LocalReport.Refresh();
-                rv_Musteri.RefreshReport();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SatisRaporForm frm = new SatisRaporForm();
+            frm.Show();
+            this.Close();
         }
     }
 }

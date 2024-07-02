@@ -82,11 +82,29 @@
     <Compile Include="Calisan\FaturaOlustur.Designer.cs">
       <DependentUpon>FaturaOlustur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calisan\MusteriReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\MusteriReportForm.Designer.cs">
+      <DependentUpon>MusteriReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calisan\RaporForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Calisan\RaporForm.Designer.cs">
       <DependentUpon>RaporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\Reports\StokReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\Reports\StokReportForm.Designer.cs">
+      <DependentUpon>StokReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\SatisRaporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\SatisRaporForm.Designer.cs">
+      <DependentUpon>SatisRaporForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Calisan\SiparisYonetim.cs">
       <SubType>Form</SubType>
@@ -99,6 +117,11 @@
     </Compile>
     <Compile Include="Calisan\TedarikYonetim.Designer.cs">
       <DependentUpon>TedarikYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSpendingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerSpendingDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entities\SepetUrun.cs" />
     <Compile Include="EnvanterYonetimDataSet.Designer.cs">
@@ -167,14 +190,28 @@
     <Compile Include="Calisan\UrunYonetim.Designer.cs">
       <DependentUpon>UrunYonetim.cs</DependentUpon>
     </Compile>
+    <Compile Include="YearlySalesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YearlySalesDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Calisan\Fatura.resx">
       <DependentUpon>Fatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calisan\FaturaOlustur.resx">
       <DependentUpon>FaturaOlustur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\MusteriReportForm.resx">
+      <DependentUpon>MusteriReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calisan\RaporForm.resx">
       <DependentUpon>RaporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\Reports\StokReportForm.resx">
+      <DependentUpon>StokReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\SatisRaporForm.resx">
+      <DependentUpon>SatisRaporForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calisan\SiparisYonetim.resx">
       <DependentUpon>SiparisYonetim.cs</DependentUpon>
@@ -221,6 +258,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Calisan\Reports\SatisReport.rdlc" />
     <EmbeddedResource Include="Calisan\Reports\StokReport.rdlc" />
+    <None Include="CustomerSpendingDataSet.xsc">
+      <DependentUpon>CustomerSpendingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerSpendingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerSpendingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerSpendingDataSet.xss">
+      <DependentUpon>CustomerSpendingDataSet.xsd</DependentUpon>
+    </None>
     <None Include="EnvanterYonetimDataSet.xsc">
       <DependentUpon>EnvanterYonetimDataSet.xsd</DependentUpon>
     </None>
@@ -253,6 +301,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="YearlySalesDataSet.xsc">
+      <DependentUpon>YearlySalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="YearlySalesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YearlySalesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YearlySalesDataSet.xss">
+      <DependentUpon>YearlySalesDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
