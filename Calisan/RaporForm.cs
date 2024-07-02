@@ -8,7 +8,7 @@ namespace EnvanterYönetimSistemi.Calisan
 {
     public partial class RaporForm : Form
     {
-        private string connectionString = @"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True";
+        private string connectionString =@"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True";
 
         public RaporForm()
         {
@@ -17,55 +17,37 @@ namespace EnvanterYönetimSistemi.Calisan
 
         private void RaporForm_Load(object sender, EventArgs e)
         {
-            LoadStokRapor();
-            LoadSatisRapor();
-            LoadMusteriRapor();
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
+            MusteriRaporLoad();
         }
-
-        private void LoadStokRapor()
+        private void MusteriRaporLoad()
         {
-            string query = "SELECT UrunAd, StokMiktar, BirimFiyat FROM Urun";
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("sp_GetTopCustomer", conn);
+            dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataSet dataSet = new DataSet();
 
-            DataTable dataTable = GetData(query);
-
-            ReportDataSource rds = new ReportDataSource("StokDataSet", dataTable);
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.LocalReport.ReportPath = "PathToYourStokReport.rdlc";
-        }
-
-        private void LoadSatisRapor()
-        {
-            string query = "SELECT s.SiparisID, m.MusteriAd, s.SiparisTarih, s.ToplamTutar FROM Siparis s JOIN Musteri m ON s.MusteriID = m.MusteriID";
-
-            DataTable dataTable = GetData(query);
-
-            ReportDataSource rds = new ReportDataSource("SatisDataSet", dataTable);
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.LocalReport.ReportPath = "PathToYourSatisReport.rdlc"; 
-        }
-
-        private void LoadMusteriRapor()
-        {
-            string query = "SELECT MusteriID, MusteriAd, Iletisim, Adres FROM Musteri";
-
-            DataTable dataTable = GetData(query);
-
-            ReportDataSource rds = new ReportDataSource("MusteriDataSet", dataTable);
-            reportViewer1.LocalReport.DataSources.Add(rds);
-            reportViewer1.LocalReport.ReportPath = "PathToYourMusteriReport.rdlc"; 
-        }
-
-        private DataTable GetData(string query)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                return dataTable;
+                conn.Open();
+                dataAdapter.Fill(dataSet, "TopMusteri");
+
+                ReportDataSource rds = new ReportDataSource("TopMusteriDataSet", dataSet.Tables["TopMusteri"]);
+                rv_Musteri.LocalReport.DataSources.Clear();
+                rv_Musteri.LocalReport.DataSources.Add(rds);
+                rv_Musteri.LocalReport.ReportPath = @"Calisan\Reports\TopMusteriReport.rdlc"; 
+                rv_Musteri.LocalReport.Refresh();
+                rv_Musteri.RefreshReport();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
+
+  
     }
 }

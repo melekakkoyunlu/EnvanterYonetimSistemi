@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -35,6 +36,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -83,6 +105,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EnvanterYonetimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnvanterYonetimDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvanterYonetimDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnvanterYonetimDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Giris\Form1.cs">
       <SubType>Form</SubType>
@@ -140,6 +172,11 @@
     <Compile Include="Calisan\UrunYonetim.Designer.cs">
       <DependentUpon>UrunYonetim.cs</DependentUpon>
     </Compile>
+    <Compile Include="TopMusteriDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopMusteriDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Calisan\Fatura.resx">
       <DependentUpon>Fatura.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +204,7 @@
     <EmbeddedResource Include="Giris\MusteriBilgiForm.resx">
       <DependentUpon>MusteriBilgiForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\Reports\MusteriReport.rdlc" />
     <EmbeddedResource Include="Musteri\MenuMusteri.resx">
       <DependentUpon>MenuMusteri.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +229,8 @@
     <EmbeddedResource Include="Calisan\UrunYonetim.resx">
       <DependentUpon>UrunYonetim.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\Reports\SatisReport.rdlc" />
+    <EmbeddedResource Include="Calisan\Reports\StokReport.rdlc" />
     <None Include="EnvanterYonetimDataSet.xsc">
       <DependentUpon>EnvanterYonetimDataSet.xsd</DependentUpon>
     </None>
@@ -202,6 +242,29 @@
     <None Include="EnvanterYonetimDataSet.xss">
       <DependentUpon>EnvanterYonetimDataSet.xsd</DependentUpon>
     </None>
+    <None Include="EnvanterYonetimDataSet1.xsc">
+      <DependentUpon>EnvanterYonetimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EnvanterYonetimDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvanterYonetimDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvanterYonetimDataSet1.xss">
+      <DependentUpon>EnvanterYonetimDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EnvanterYonetimDataSet2.xsc">
+      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EnvanterYonetimDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EnvanterYonetimDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnvanterYonetimDataSet2.xss">
+      <DependentUpon>EnvanterYonetimDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,9 +274,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TopMusteriDataSet1.xsc">
+      <DependentUpon>TopMusteriDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TopMusteriDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TopMusteriDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TopMusteriDataSet1.xss">
+      <DependentUpon>TopMusteriDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
 </Project>
