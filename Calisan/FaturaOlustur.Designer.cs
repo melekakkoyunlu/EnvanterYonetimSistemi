@@ -49,6 +49,7 @@
             // 
             // dgv_fatura
             // 
+            this.dgv_fatura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_fatura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_fatura.Location = new System.Drawing.Point(37, 88);
             this.dgv_fatura.Name = "dgv_fatura";
@@ -66,6 +67,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(889, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -77,6 +79,7 @@
             // 
             // btn_olustur
             // 
+            this.btn_olustur.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_olustur.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_olustur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_olustur.Location = new System.Drawing.Point(389, 468);

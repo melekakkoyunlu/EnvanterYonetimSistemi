@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 using EnvanterYönetimSistemi.Entities;
 
@@ -68,21 +69,21 @@ namespace EnvanterYönetimSistemi.Musteri
             try
             {
                 conn.Open();
+                String siparisTarih = DateTime.Now.ToString("yyyy-MM-dd");
+                String durum = "Onay Bekliyor";
+                decimal toplamTutar = sepet.Sum(urun => urun.ToplamFiyat);
+
+                String queryToSiparis = $"INSERT INTO Siparis (MusteriID, SiparisTarih, ToplamTutar, SiparisDurum) VALUES (@MusteriID, @SiparisTarih, @ToplamTutar, @SiparisDurum); SELECT SCOPE_IDENTITY();";
+                SqlCommand siparisCmd = new SqlCommand(queryToSiparis, conn);
+                siparisCmd.Parameters.AddWithValue("@MusteriID", musteriID);
+                siparisCmd.Parameters.AddWithValue("@SiparisTarih", siparisTarih);
+                siparisCmd.Parameters.AddWithValue("@ToplamTutar", toplamTutar);
+                siparisCmd.Parameters.AddWithValue("@SiparisDurum", durum);
+
+                int siparisID = Convert.ToInt32(siparisCmd.ExecuteScalar());
+
                 foreach (SepetUrun urun in sepet)
                 {
-                    MessageBox.Show($"MusteriID : {musteriID}" );
-                    String siparisTarih = DateTime.Now.ToString("yyyy-MM-dd");
-                    String durum = "Onay Bekliyor";
-
-                    String queryToSiparis = $"INSERT INTO Siparis (MusteriID, SiparisTarih, ToplamTutar, SiparisDurum) VALUES (@MusteriID, @SiparisTarih, @ToplamTutar, @SiparisDurum); SELECT SCOPE_IDENTITY();";
-                    SqlCommand siparisCmd = new SqlCommand(queryToSiparis, conn);
-                    siparisCmd.Parameters.AddWithValue("@MusteriID", musteriID);
-                    siparisCmd.Parameters.AddWithValue("@SiparisTarih", siparisTarih);
-                    siparisCmd.Parameters.AddWithValue("@ToplamTutar", urun.ToplamFiyat);
-                    siparisCmd.Parameters.AddWithValue("@SiparisDurum", durum);
-
-                    int siparisID = Convert.ToInt32(siparisCmd.ExecuteScalar());
-
                     String queryToSiparisDetay = $"INSERT INTO SiparisDetay (SiparisID, UrunID, BirimFiyat, Adet) VALUES (@SiparisID, @UrunID, @BirimFiyat, @Adet)";
                     SqlCommand siparisDetayCmd = new SqlCommand(queryToSiparisDetay, conn);
                     siparisDetayCmd.Parameters.AddWithValue("@SiparisID", siparisID);
@@ -91,6 +92,9 @@ namespace EnvanterYönetimSistemi.Musteri
                     siparisDetayCmd.Parameters.AddWithValue("@Adet", urun.Adet);
                     siparisDetayCmd.ExecuteNonQuery();
                 }
+
+                MessageBox.Show("Sipariş başarıyla onaylandı.");
+    
             }
             catch (Exception ex)
             {

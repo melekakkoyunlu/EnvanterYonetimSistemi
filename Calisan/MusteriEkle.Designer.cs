@@ -43,6 +43,7 @@
             // 
             // lbl_musteriAd
             // 
+            this.lbl_musteriAd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_musteriAd.AutoSize = true;
             this.lbl_musteriAd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_musteriAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -54,6 +55,7 @@
             // 
             // lbl_musteriInfo
             // 
+            this.lbl_musteriInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_musteriInfo.AutoSize = true;
             this.lbl_musteriInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_musteriInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -65,6 +67,7 @@
             // 
             // lbl_musteriAdres
             // 
+            this.lbl_musteriAdres.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_musteriAdres.AutoSize = true;
             this.lbl_musteriAdres.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_musteriAdres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -76,6 +79,7 @@
             // 
             // txt_musteriAd
             // 
+            this.txt_musteriAd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_musteriAd.Location = new System.Drawing.Point(29, 63);
             this.txt_musteriAd.Name = "txt_musteriAd";
             this.txt_musteriAd.Size = new System.Drawing.Size(265, 20);
@@ -84,6 +88,7 @@
             // 
             // txt_musteriInfo
             // 
+            this.txt_musteriInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_musteriInfo.Location = new System.Drawing.Point(29, 121);
             this.txt_musteriInfo.Name = "txt_musteriInfo";
             this.txt_musteriInfo.Size = new System.Drawing.Size(265, 20);
@@ -91,6 +96,7 @@
             // 
             // txt_musteriAdres
             // 
+            this.txt_musteriAdres.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_musteriAdres.Location = new System.Drawing.Point(29, 181);
             this.txt_musteriAdres.Multiline = true;
             this.txt_musteriAdres.Name = "txt_musteriAdres";
@@ -99,6 +105,7 @@
             // 
             // btn_ekle
             // 
+            this.btn_ekle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_ekle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ekle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_ekle.Location = new System.Drawing.Point(29, 289);
@@ -111,6 +118,7 @@
             // 
             // btn_temizle
             // 
+            this.btn_temizle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_temizle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_temizle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_temizle.Location = new System.Drawing.Point(153, 289);
@@ -123,6 +131,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(333, 21);
             this.pictureBox1.Name = "pictureBox1";

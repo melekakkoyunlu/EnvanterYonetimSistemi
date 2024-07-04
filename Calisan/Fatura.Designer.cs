@@ -61,6 +61,7 @@
             // 
             // panelPrint
             // 
+            this.panelPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelPrint.Controls.Add(this.dgv_urunler);
             this.panelPrint.Controls.Add(this.lbl_siparis);
             this.panelPrint.Controls.Add(this.label1);
@@ -80,7 +81,6 @@
             this.panelPrint.Controls.Add(this.label3);
             this.panelPrint.Controls.Add(this.label2);
             this.panelPrint.Controls.Add(this.lbl_header);
-            this.panelPrint.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPrint.Location = new System.Drawing.Point(0, 50);
             this.panelPrint.Name = "panelPrint";
             this.panelPrint.Size = new System.Drawing.Size(584, 623);
@@ -88,6 +88,7 @@
             // 
             // dgv_urunler
             // 
+            this.dgv_urunler.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_urunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_urunler.Location = new System.Drawing.Point(26, 211);
             this.dgv_urunler.Name = "dgv_urunler";
@@ -118,7 +119,7 @@
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.Location = new System.Drawing.Point(384, 571);
@@ -129,7 +130,7 @@
             // 
             // lbl_toplam
             // 
-            this.lbl_toplam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_toplam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_toplam.AutoSize = true;
             this.lbl_toplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_toplam.Location = new System.Drawing.Point(491, 571);
@@ -195,7 +196,7 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(12, 533);
             this.panel4.Name = "panel4";
@@ -288,6 +289,7 @@
             // 
             // pic_print
             // 
+            this.pic_print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_print.Image = ((System.Drawing.Image)(resources.GetObject("pic_print.Image")));
             this.pic_print.Location = new System.Drawing.Point(539, 12);
             this.pic_print.Name = "pic_print";

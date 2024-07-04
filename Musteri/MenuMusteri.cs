@@ -70,9 +70,17 @@ namespace EnvanterYönetimSistemi
             int adet = Convert.ToInt32(adetTxt);
             toplamFiyat = (adet * birimFiyat);
 
-            sepet.Add(new SepetUrun { UrunAd = urunAd, Adet = adet, ToplamFiyat = toplamFiyat, MusteriID = musteriID, UrunID = urunID, BirimFiyat = birimFiyat });
+            if (adet > stok)
+            {
+                MessageBox.Show("Yeterli stok yok.");
+            }
+            else
+            { 
+                sepet.Add(new SepetUrun { UrunAd = urunAd, Adet = adet, ToplamFiyat = toplamFiyat, MusteriID = musteriID, UrunID = urunID, BirimFiyat = birimFiyat });
+                MessageBox.Show("Ürün sepete eklendi.");
 
-            MessageBox.Show("Ürün sepete eklendi.");
+            }
+
             txt_adet.Clear();
             lbl_toplam.Text = String.Empty;
 

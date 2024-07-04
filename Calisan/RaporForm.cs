@@ -9,7 +9,6 @@ namespace EnvanterYönetimSistemi.Calisan
 {
     public partial class RaporForm : Form
     {
-        String connectionString = @"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True";
 
         public RaporForm()
         {

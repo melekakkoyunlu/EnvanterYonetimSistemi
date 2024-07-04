@@ -35,17 +35,22 @@
             this.btn_iptal = new System.Windows.Forms.Button();
             this.btn_onayla = new System.Windows.Forms.Button();
             this.dgv_gelenSiparis = new System.Windows.Forms.DataGridView();
+            this.SiparisID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MusteriID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SiparisTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ToplamTutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SiparisDurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siparisBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.envanterYonetimDataSet = new EnvanterYönetimSistemi.EnvanterYonetimDataSet();
             this.siparisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lbl_aktif = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siparisTableAdapter = new EnvanterYönetimSistemi.EnvanterYonetimDataSetTableAdapters.SiparisTableAdapter();
-            this.SiparisID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MusteriID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiparisTarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToplamTutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiparisDurum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siparisIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musteriIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siparisTarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toplamTutarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siparisDurumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gelenSiparis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.siparisBindingSource1)).BeginInit();
@@ -56,6 +61,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.Controls.Add(this.btn_sil);
             this.panel2.Controls.Add(this.btn_iptal);
             this.panel2.Controls.Add(this.btn_onayla);
@@ -67,6 +73,7 @@
             // 
             // btn_sil
             // 
+            this.btn_sil.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_sil.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_sil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_sil.Location = new System.Drawing.Point(617, 241);
@@ -79,6 +86,7 @@
             // 
             // btn_iptal
             // 
+            this.btn_iptal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_iptal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_iptal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_iptal.Location = new System.Drawing.Point(617, 173);
@@ -91,6 +99,7 @@
             // 
             // btn_onayla
             // 
+            this.btn_onayla.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_onayla.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_onayla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_onayla.Location = new System.Drawing.Point(617, 99);
@@ -103,6 +112,7 @@
             // 
             // dgv_gelenSiparis
             // 
+            this.dgv_gelenSiparis.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgv_gelenSiparis.AutoGenerateColumns = false;
             this.dgv_gelenSiparis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_gelenSiparis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -110,54 +120,17 @@
             this.MusteriID,
             this.SiparisTarih,
             this.ToplamTutar,
-            this.SiparisDurum});
+            this.SiparisDurum,
+            this.siparisIDDataGridViewTextBoxColumn,
+            this.musteriIDDataGridViewTextBoxColumn,
+            this.siparisTarihDataGridViewTextBoxColumn,
+            this.toplamTutarDataGridViewTextBoxColumn,
+            this.siparisDurumDataGridViewTextBoxColumn});
             this.dgv_gelenSiparis.DataSource = this.siparisBindingSource1;
             this.dgv_gelenSiparis.Location = new System.Drawing.Point(20, 18);
             this.dgv_gelenSiparis.Name = "dgv_gelenSiparis";
             this.dgv_gelenSiparis.Size = new System.Drawing.Size(543, 487);
             this.dgv_gelenSiparis.TabIndex = 0;
-            // 
-            // siparisBindingSource1
-            // 
-            this.siparisBindingSource1.DataMember = "Siparis";
-            this.siparisBindingSource1.DataSource = this.envanterYonetimDataSet;
-            // 
-            // envanterYonetimDataSet
-            // 
-            this.envanterYonetimDataSet.DataSetName = "EnvanterYonetimDataSet";
-            this.envanterYonetimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // siparisBindingSource
-            // 
-            this.siparisBindingSource.DataMember = "Siparis";
-            this.siparisBindingSource.DataSource = this.envanterYonetimDataSet;
-            // 
-            // lbl_aktif
-            // 
-            this.lbl_aktif.AutoSize = true;
-            this.lbl_aktif.BackColor = System.Drawing.Color.CadetBlue;
-            this.lbl_aktif.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_aktif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_aktif.Location = new System.Drawing.Point(46, 39);
-            this.lbl_aktif.Name = "lbl_aktif";
-            this.lbl_aktif.Size = new System.Drawing.Size(218, 32);
-            this.lbl_aktif.TabIndex = 3;
-            this.lbl_aktif.Text = "Aktif Siparişler:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(773, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // siparisTableAdapter
-            // 
-            this.siparisTableAdapter.ClearBeforeFill = true;
             // 
             // SiparisID
             // 
@@ -189,6 +162,80 @@
             this.SiparisDurum.DataPropertyName = "SiparisDurum";
             this.SiparisDurum.HeaderText = "SiparisDurum";
             this.SiparisDurum.Name = "SiparisDurum";
+            // 
+            // siparisBindingSource1
+            // 
+            this.siparisBindingSource1.DataMember = "Siparis";
+            this.siparisBindingSource1.DataSource = this.envanterYonetimDataSet;
+            // 
+            // envanterYonetimDataSet
+            // 
+            this.envanterYonetimDataSet.DataSetName = "EnvanterYonetimDataSet";
+            this.envanterYonetimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // siparisBindingSource
+            // 
+            this.siparisBindingSource.DataMember = "Siparis";
+            this.siparisBindingSource.DataSource = this.envanterYonetimDataSet;
+            // 
+            // lbl_aktif
+            // 
+            this.lbl_aktif.AutoSize = true;
+            this.lbl_aktif.BackColor = System.Drawing.Color.CadetBlue;
+            this.lbl_aktif.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_aktif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbl_aktif.Location = new System.Drawing.Point(46, 39);
+            this.lbl_aktif.Name = "lbl_aktif";
+            this.lbl_aktif.Size = new System.Drawing.Size(218, 32);
+            this.lbl_aktif.TabIndex = 3;
+            this.lbl_aktif.Text = "Aktif Siparişler:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(773, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // siparisTableAdapter
+            // 
+            this.siparisTableAdapter.ClearBeforeFill = true;
+            // 
+            // siparisIDDataGridViewTextBoxColumn
+            // 
+            this.siparisIDDataGridViewTextBoxColumn.DataPropertyName = "SiparisID";
+            this.siparisIDDataGridViewTextBoxColumn.HeaderText = "SiparisID";
+            this.siparisIDDataGridViewTextBoxColumn.Name = "siparisIDDataGridViewTextBoxColumn";
+            this.siparisIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // musteriIDDataGridViewTextBoxColumn
+            // 
+            this.musteriIDDataGridViewTextBoxColumn.DataPropertyName = "MusteriID";
+            this.musteriIDDataGridViewTextBoxColumn.HeaderText = "MusteriID";
+            this.musteriIDDataGridViewTextBoxColumn.Name = "musteriIDDataGridViewTextBoxColumn";
+            // 
+            // siparisTarihDataGridViewTextBoxColumn
+            // 
+            this.siparisTarihDataGridViewTextBoxColumn.DataPropertyName = "SiparisTarih";
+            this.siparisTarihDataGridViewTextBoxColumn.HeaderText = "SiparisTarih";
+            this.siparisTarihDataGridViewTextBoxColumn.Name = "siparisTarihDataGridViewTextBoxColumn";
+            // 
+            // toplamTutarDataGridViewTextBoxColumn
+            // 
+            this.toplamTutarDataGridViewTextBoxColumn.DataPropertyName = "ToplamTutar";
+            this.toplamTutarDataGridViewTextBoxColumn.HeaderText = "ToplamTutar";
+            this.toplamTutarDataGridViewTextBoxColumn.Name = "toplamTutarDataGridViewTextBoxColumn";
+            // 
+            // siparisDurumDataGridViewTextBoxColumn
+            // 
+            this.siparisDurumDataGridViewTextBoxColumn.DataPropertyName = "SiparisDurum";
+            this.siparisDurumDataGridViewTextBoxColumn.HeaderText = "SiparisDurum";
+            this.siparisDurumDataGridViewTextBoxColumn.Name = "siparisDurumDataGridViewTextBoxColumn";
             // 
             // SiparisYonetim
             // 
@@ -230,5 +277,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SiparisTarih;
         private System.Windows.Forms.DataGridViewTextBoxColumn ToplamTutar;
         private System.Windows.Forms.DataGridViewTextBoxColumn SiparisDurum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn siparisIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn musteriIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn siparisTarihDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn toplamTutarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn siparisDurumDataGridViewTextBoxColumn;
     }
 }

@@ -40,6 +40,7 @@
             // 
             // lbl_text1
             // 
+            this.lbl_text1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_text1.AutoSize = true;
             this.lbl_text1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_text1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -48,13 +49,11 @@
             this.lbl_text1.Name = "lbl_text1";
             this.lbl_text1.Size = new System.Drawing.Size(187, 36);
             this.lbl_text1.TabIndex = 0;
-            this.lbl_text1.Text = "Hoşgeldiniz!"; 
+            this.lbl_text1.Text = "Hoşgeldiniz!";
             // 
             // lbl_txt2
             // 
-            this.lbl_txt2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_txt2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbl_txt2.AutoSize = true;
             this.lbl_txt2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_txt2.ForeColor = System.Drawing.Color.AliceBlue;
@@ -66,6 +65,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.btn_enter);
             this.panel1.Controls.Add(this.txt_password);
@@ -119,7 +119,7 @@
             // 
             // btn_olustur
             // 
-            this.btn_olustur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_olustur.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_olustur.BackColor = System.Drawing.Color.AliceBlue;
             this.btn_olustur.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_olustur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

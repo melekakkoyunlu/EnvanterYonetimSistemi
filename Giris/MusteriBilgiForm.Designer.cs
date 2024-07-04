@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_musteriAd = new System.Windows.Forms.Label();
-            this.lbl_iletisim = new System.Windows.Forms.Label();
-            this.lbl_adres = new System.Windows.Forms.Label();
-            this.txt_musteriAd = new System.Windows.Forms.TextBox();
-            this.txt_iletisim = new System.Windows.Forms.TextBox();
-            this.txt_adres = new System.Windows.Forms.TextBox();
             this.btn_kaydet = new System.Windows.Forms.Button();
+            this.txt_adres = new System.Windows.Forms.TextBox();
+            this.txt_iletisim = new System.Windows.Forms.TextBox();
+            this.txt_musteriAd = new System.Windows.Forms.TextBox();
+            this.lbl_adres = new System.Windows.Forms.Label();
+            this.lbl_iletisim = new System.Windows.Forms.Label();
+            this.lbl_musteriAd = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.btn_kaydet);
             this.panel1.Controls.Add(this.txt_adres);
@@ -54,25 +55,41 @@
             this.panel1.Size = new System.Drawing.Size(459, 309);
             this.panel1.TabIndex = 0;
             // 
-            // lbl_musteriAd
+            // btn_kaydet
             // 
-            this.lbl_musteriAd.AutoSize = true;
-            this.lbl_musteriAd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_musteriAd.Location = new System.Drawing.Point(56, 41);
-            this.lbl_musteriAd.Name = "lbl_musteriAd";
-            this.lbl_musteriAd.Size = new System.Drawing.Size(30, 19);
-            this.lbl_musteriAd.TabIndex = 0;
-            this.lbl_musteriAd.Text = "Ad";
+            this.btn_kaydet.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_kaydet.Location = new System.Drawing.Point(196, 266);
+            this.btn_kaydet.Name = "btn_kaydet";
+            this.btn_kaydet.Size = new System.Drawing.Size(75, 23);
+            this.btn_kaydet.TabIndex = 6;
+            this.btn_kaydet.Text = "KAYDET";
+            this.btn_kaydet.UseVisualStyleBackColor = true;
+            this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
             // 
-            // lbl_iletisim
+            // txt_adres
             // 
-            this.lbl_iletisim.AutoSize = true;
-            this.lbl_iletisim.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_iletisim.Location = new System.Drawing.Point(56, 91);
-            this.lbl_iletisim.Name = "lbl_iletisim";
-            this.lbl_iletisim.Size = new System.Drawing.Size(62, 19);
-            this.lbl_iletisim.TabIndex = 1;
-            this.lbl_iletisim.Text = "İletişim";
+            this.txt_adres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_adres.Location = new System.Drawing.Point(149, 145);
+            this.txt_adres.Multiline = true;
+            this.txt_adres.Name = "txt_adres";
+            this.txt_adres.Size = new System.Drawing.Size(247, 102);
+            this.txt_adres.TabIndex = 5;
+            // 
+            // txt_iletisim
+            // 
+            this.txt_iletisim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_iletisim.Location = new System.Drawing.Point(149, 90);
+            this.txt_iletisim.Name = "txt_iletisim";
+            this.txt_iletisim.Size = new System.Drawing.Size(247, 20);
+            this.txt_iletisim.TabIndex = 4;
+            // 
+            // txt_musteriAd
+            // 
+            this.txt_musteriAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_musteriAd.Location = new System.Drawing.Point(149, 40);
+            this.txt_musteriAd.Name = "txt_musteriAd";
+            this.txt_musteriAd.Size = new System.Drawing.Size(247, 20);
+            this.txt_musteriAd.TabIndex = 3;
             // 
             // lbl_adres
             // 
@@ -84,41 +101,25 @@
             this.lbl_adres.TabIndex = 2;
             this.lbl_adres.Text = "Adres";
             // 
-            // txt_musteriAd
+            // lbl_iletisim
             // 
-            this.txt_musteriAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_musteriAd.Location = new System.Drawing.Point(149, 40);
-            this.txt_musteriAd.Name = "txt_musteriAd";
-            this.txt_musteriAd.Size = new System.Drawing.Size(247, 20);
-            this.txt_musteriAd.TabIndex = 3;
+            this.lbl_iletisim.AutoSize = true;
+            this.lbl_iletisim.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_iletisim.Location = new System.Drawing.Point(56, 91);
+            this.lbl_iletisim.Name = "lbl_iletisim";
+            this.lbl_iletisim.Size = new System.Drawing.Size(62, 19);
+            this.lbl_iletisim.TabIndex = 1;
+            this.lbl_iletisim.Text = "İletişim";
             // 
-            // txt_iletisim
+            // lbl_musteriAd
             // 
-            this.txt_iletisim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_iletisim.Location = new System.Drawing.Point(149, 90);
-            this.txt_iletisim.Name = "txt_iletisim";
-            this.txt_iletisim.Size = new System.Drawing.Size(247, 20);
-            this.txt_iletisim.TabIndex = 4;
-            // 
-            // txt_adres
-            // 
-            this.txt_adres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_adres.Location = new System.Drawing.Point(149, 145);
-            this.txt_adres.Multiline = true;
-            this.txt_adres.Name = "txt_adres";
-            this.txt_adres.Size = new System.Drawing.Size(247, 102);
-            this.txt_adres.TabIndex = 5;
-            // 
-            // btn_kaydet
-            // 
-            this.btn_kaydet.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_kaydet.Location = new System.Drawing.Point(196, 266);
-            this.btn_kaydet.Name = "btn_kaydet";
-            this.btn_kaydet.Size = new System.Drawing.Size(75, 23);
-            this.btn_kaydet.TabIndex = 6;
-            this.btn_kaydet.Text = "KAYDET";
-            this.btn_kaydet.UseVisualStyleBackColor = true;
-            this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
+            this.lbl_musteriAd.AutoSize = true;
+            this.lbl_musteriAd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_musteriAd.Location = new System.Drawing.Point(56, 41);
+            this.lbl_musteriAd.Name = "lbl_musteriAd";
+            this.lbl_musteriAd.Size = new System.Drawing.Size(30, 19);
+            this.lbl_musteriAd.TabIndex = 0;
+            this.lbl_musteriAd.Text = "Ad";
             // 
             // MusteriBilgiForm
             // 

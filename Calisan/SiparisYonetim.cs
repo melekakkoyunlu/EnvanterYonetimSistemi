@@ -16,6 +16,7 @@ namespace EnvanterYönetimSistemi.Calisan
         public SiparisYonetim()
         {
             InitializeComponent();
+            StokUyari();
         }
 
         private void SiparisYonetim_Load(object sender, EventArgs e)
@@ -55,6 +56,36 @@ namespace EnvanterYönetimSistemi.Calisan
                 MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
         }
+        private void StokUyari()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True"))
+                {
+                    conn.Open();
+                    string query = "SELECT UrunID, UrunAd, StokMiktar FROM Urun WHERE StokMiktar < 10";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        int urunID = reader.GetInt32(0);
+                        string urunAd = reader.GetString(1);
+                        int stokMiktar = reader.GetInt32(2);
+
+                        MessageBox.Show($"'{urunAd}' adlı ürünün stok miktarı {stokMiktar} adete düştü! Stok miktarını yeniden değerlendirin.");
+
+                    }
+
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message);
+            }
+        }
+
 
         private void UpdateSiparisDurum(string durum)
         {
@@ -68,6 +99,7 @@ namespace EnvanterYönetimSistemi.Calisan
                     using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-G23CHID;Initial Catalog=EnvanterYonetim;Integrated Security=True"))
                     {
                         conn.Open();
+
                         string updateQuery = $"UPDATE Siparis SET SiparisDurum = '{durum}' WHERE SiparisID = {siparisID}";
                         SqlCommand cmd = new SqlCommand(updateQuery, conn);
                         int rowsAffected = cmd.ExecuteNonQuery();
@@ -76,23 +108,35 @@ namespace EnvanterYönetimSistemi.Calisan
                         {
                             MessageBox.Show("İşlem başarılı.");
 
-                            string selectDetayQuery = $"SELECT UrunID, Adet FROM SiparisDetay WHERE SiparisID = {siparisID}";
-                            SqlCommand selectDetayCmd = new SqlCommand(selectDetayQuery, conn);
-                            SqlDataReader reader = selectDetayCmd.ExecuteReader();
-
-                            while (reader.Read())
+                            if (durum == "Onaylandı")
                             {
-                                int urunID = reader.GetInt32(0);
-                                int adet = reader.GetInt32(1);
+                                string selectDetayQuery = $"SELECT UrunID, Adet FROM SiparisDetay WHERE SiparisID = {siparisID}";
+                                SqlCommand selectDetayCmd = new SqlCommand(selectDetayQuery, conn);
+                                SqlDataReader reader = selectDetayCmd.ExecuteReader();
 
-                                string updateStokQuery = $"UPDATE Urun SET StokMiktar = StokMiktar - {adet} WHERE UrunID = {urunID}";
-                                SqlCommand updateStokCmd = new SqlCommand(updateStokQuery, conn);
-                                updateStokCmd.ExecuteNonQuery();
+                                List<Tuple<int, int>> urunDetaylari = new List<Tuple<int, int>>();
+
+                                while (reader.Read())
+                                {
+                                    int urunID = reader.GetInt32(0);
+                                    int adet = reader.GetInt32(1);
+                                    urunDetaylari.Add(new Tuple<int, int>(urunID, adet));
+                                }
+
+                                reader.Close();
+
+                                foreach (var urunDetay in urunDetaylari)
+                                {
+                                    int urunID = urunDetay.Item1;
+                                    int adet = urunDetay.Item2;
+
+                                    string updateStokQuery = $"UPDATE Urun SET StokMiktar = StokMiktar - {adet} WHERE UrunID = {urunID}";
+                                    SqlCommand updateStokCmd = new SqlCommand(updateStokQuery, conn);
+                                    updateStokCmd.ExecuteNonQuery();
+                                }
                             }
 
-                            reader.Close();
-
-                            LoadSiparisler(); 
+                            LoadSiparisler();
                         }
                         else
                         {
@@ -111,9 +155,11 @@ namespace EnvanterYönetimSistemi.Calisan
             }
         }
 
+
         private void btn_onayla_Click(object sender, EventArgs e)
         {
             UpdateSiparisDurum("Onaylandı");
+
 
         }
 

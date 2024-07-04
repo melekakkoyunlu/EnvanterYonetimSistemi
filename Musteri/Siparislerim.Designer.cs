@@ -33,14 +33,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_siparisler = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.envanterYonetimDataSet = new EnvanterYönetimSistemi.EnvanterYonetimDataSet();
             this.envanterYonetimDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.envanterYonetimDataSet = new EnvanterYönetimSistemi.EnvanterYonetimDataSet();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_siparisler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -66,17 +66,28 @@
             // dgv_siparisler
             // 
             this.dgv_siparisler.AllowUserToOrderColumns = true;
+            this.dgv_siparisler.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_siparisler.AutoGenerateColumns = false;
             this.dgv_siparisler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_siparisler.DataSource = this.envanterYonetimDataSetBindingSource;
-            this.dgv_siparisler.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_siparisler.Location = new System.Drawing.Point(0, 0);
             this.dgv_siparisler.Name = "dgv_siparisler";
             this.dgv_siparisler.Size = new System.Drawing.Size(739, 352);
             this.dgv_siparisler.TabIndex = 0;
             // 
+            // envanterYonetimDataSetBindingSource
+            // 
+            this.envanterYonetimDataSetBindingSource.DataSource = this.envanterYonetimDataSet;
+            this.envanterYonetimDataSetBindingSource.Position = 0;
+            // 
+            // envanterYonetimDataSet
+            // 
+            this.envanterYonetimDataSet.DataSetName = "EnvanterYonetimDataSet";
+            this.envanterYonetimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.Location = new System.Drawing.Point(51, 455);
@@ -86,16 +97,6 @@
             this.button1.Text = "İptal Et";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // envanterYonetimDataSet
-            // 
-            this.envanterYonetimDataSet.DataSetName = "EnvanterYonetimDataSet";
-            this.envanterYonetimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // envanterYonetimDataSetBindingSource
-            // 
-            this.envanterYonetimDataSetBindingSource.DataSource = this.envanterYonetimDataSet;
-            this.envanterYonetimDataSetBindingSource.Position = 0;
             // 
             // Siparislerim
             // 
@@ -112,8 +113,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_siparisler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.envanterYonetimDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -44,6 +44,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.dgv_sepet);
             this.panel1.Location = new System.Drawing.Point(23, 71);
@@ -91,6 +92,7 @@
             // 
             // btn_clear
             // 
+            this.btn_clear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_clear.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_clear.Location = new System.Drawing.Point(253, 409);
@@ -103,6 +105,7 @@
             // 
             // btn_onayla
             // 
+            this.btn_onayla.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_onayla.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_onayla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_onayla.Location = new System.Drawing.Point(125, 409);

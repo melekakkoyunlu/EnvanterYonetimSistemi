@@ -63,6 +63,7 @@
             // 
             // btn_musteri
             // 
+            this.btn_musteri.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_musteri.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_musteri.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_musteri.ForeColor = System.Drawing.Color.AliceBlue;
@@ -76,6 +77,7 @@
             // 
             // btn_fatura
             // 
+            this.btn_fatura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_fatura.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_fatura.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_fatura.ForeColor = System.Drawing.Color.AliceBlue;
@@ -89,6 +91,7 @@
             // 
             // btn_rapor
             // 
+            this.btn_rapor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_rapor.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_rapor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_rapor.ForeColor = System.Drawing.Color.AliceBlue;
@@ -102,6 +105,7 @@
             // 
             // btn_urunYonetim
             // 
+            this.btn_urunYonetim.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_urunYonetim.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_urunYonetim.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_urunYonetim.ForeColor = System.Drawing.Color.AliceBlue;
@@ -115,6 +119,7 @@
             // 
             // btn_tedarikciYonetim
             // 
+            this.btn_tedarikciYonetim.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_tedarikciYonetim.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_tedarikciYonetim.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_tedarikciYonetim.ForeColor = System.Drawing.Color.AliceBlue;
@@ -128,6 +133,7 @@
             // 
             // btn_siparisYonetim
             // 
+            this.btn_siparisYonetim.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_siparisYonetim.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_siparisYonetim.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_siparisYonetim.ForeColor = System.Drawing.Color.AliceBlue;
