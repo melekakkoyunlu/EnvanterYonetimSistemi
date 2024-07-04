@@ -94,10 +94,10 @@
     <Compile Include="Calisan\RaporForm.Designer.cs">
       <DependentUpon>RaporForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calisan\Reports\StokReportForm.cs">
+    <Compile Include="Calisan\StokReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calisan\Reports\StokReportForm.Designer.cs">
+    <Compile Include="Calisan\StokReportForm.Designer.cs">
       <DependentUpon>StokReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Calisan\SatisRaporForm.cs">
@@ -212,7 +212,8 @@
     <EmbeddedResource Include="Calisan\RaporForm.resx">
       <DependentUpon>RaporForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Calisan\Reports\StokReportForm.resx">
+    <EmbeddedResource Include="Calisan\Reports\StokReport.rdlc" />
+    <EmbeddedResource Include="Calisan\StokReportForm.resx">
       <DependentUpon>StokReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calisan\SatisRaporForm.resx">
@@ -262,7 +263,6 @@
       <DependentUpon>UrunYonetim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calisan\Reports\SatisReport.rdlc" />
-    <EmbeddedResource Include="Calisan\Reports\StokReport.rdlc" />
     <None Include="CustomerSpendingDataSet.xsc">
       <DependentUpon>CustomerSpendingDataSet.xsd</DependentUpon>
     </None>

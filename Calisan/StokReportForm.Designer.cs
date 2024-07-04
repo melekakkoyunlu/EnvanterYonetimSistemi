@@ -47,6 +47,7 @@
             // rv_stok
             // 
             this.rv_stok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rv_stok.LocalReport.ReportEmbeddedResource = "EnvanterYönetimSistemi.Calisan.Reports.StokReport.rdlc";
             this.rv_stok.Location = new System.Drawing.Point(0, 0);
             this.rv_stok.Name = "rv_stok";
             this.rv_stok.ServerReport.BearerToken = null;
