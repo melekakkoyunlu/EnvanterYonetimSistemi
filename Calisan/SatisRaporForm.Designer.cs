@@ -48,6 +48,7 @@
             // rv_satis
             // 
             this.rv_satis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rv_satis.LocalReport.ReportEmbeddedResource = "EnvanterYönetimSistemi.Calisan.Reports.SatisReport.rdlc";
             this.rv_satis.Location = new System.Drawing.Point(0, 0);
             this.rv_satis.Name = "rv_satis";
             this.rv_satis.ServerReport.BearerToken = null;
